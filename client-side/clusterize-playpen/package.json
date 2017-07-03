@@ -1,0 +1,16 @@
+{
+  "name": "clusterize-playpen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Steve Curtis",
+  "license": "MIT",
+  "dependencies": {
+    "customizer": "^1.0.0"
+  },
+  "devDependencies": {
+    "http-server": "^0.10.0"
+  },
+  "scripts": {
+    "start": "http-server -p 8000 ./app"
+  }
+}
