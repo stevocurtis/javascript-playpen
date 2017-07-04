@@ -4,13 +4,14 @@
   "main": "index.js",
   "author": "Steve Curtis",
   "license": "MIT",
-  "dependencies": {
-    "customizer": "^1.0.0"
-  },
   "devDependencies": {
-    "http-server": "^0.10.0"
+    "clusterize": "^0.1.2",
+    "clusterize.js": "^0.17.6",
+    "http-server": "^0.10.0",
+    "jasmine": "^2.6.0"
   },
   "scripts": {
-    "start": "http-server -p 8000 ./app"
+    "start": "http-server -p 8000 -c-1 .",
+    "test": "jasmine JASMINE_CONFIG_PATH=jasmine.json"
   }
 }
