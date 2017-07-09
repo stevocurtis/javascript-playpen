@@ -2,14 +2,30 @@
 <html>
 <head>
     <title>Clusterize Playpen</title>
-    <link href="node_modules/clusterize.js/clusterize.css">
-    <!--<script src="../node_modules/clusterize.js/clusterize.min.js"></script>-->
+    <link href="node_modules/clusterize.js/clusterize.css" rel="stylesheet">
+    <link href="app/app.css" rel="stylesheet">
     <script src="node_modules/clusterize.js/clusterize.min.js"></script>
     <script src="app/app.js"></script>
 </head>
 <body onload="buildAndDisplayData()">
 <h1>Clusterize Playpen</h1>
-<p><span id="notifications">Loading page</span></p>
-<p>To be continued ...</p>
+<div class="clusterize">
+    <table>
+        <thead>
+            <tr>
+                <th>Header</th>
+            </tr>
+        </thead>
+    </table>
+    <div id="scrollArea" class="clusterize-scroll">
+        <table>
+            <tbody id="contentArea" class="clusterize-content">
+                <tr class="clusterize-no-data">
+                    <td>Loading data...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 </body>
 </html>

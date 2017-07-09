@@ -1,30 +1,25 @@
-function buildAndDisplayData() {
-    var data = buildData(10);
+buildAndDisplayData = function buildAndDisplayData() {
+    var data = buildData(1000);
     displayTable(data);
 }
 
-function buildData(numRows) {
-    updateNotifications("building " + numRows + " data rows");
-    var data = {};
+buildData = function buildData(numRows) {
+    var data = [];
     for (var i = 1; i <= numRows; i++) {
-        data[i] = {
-            column1: "col " + i + " val1",
-            column2: "co2 " + i + " val2",
-            column3: "co3 " + i + " val3"
-        }
+        data.push("<tr><td>" + i + "</td></tr>");
     }
     console.log("building data with numRows: " + numRows);
     return data;
 }
 
-function displayTable(data) {
-    updateNotifications("rendering data rows");
+displayTable = function displayTable(data) {
+    var clusterize = new Clusterize({
+        rows: data,
+        scrollId: 'scrollArea',
+        contentId: 'contentArea'
+    });
 }
 
-function updateNotifications(notification) {
-    document.getElementById("notifications").innerText = notification;
-}
-
-function testFunction() {
-    return true;
-}
+exports.buildAndDisplayData = buildAndDisplayData;
+exports.buildData = buildData;
+exports.displayTable = displayTable;

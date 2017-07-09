@@ -11,7 +11,7 @@
     "jasmine": "^2.6.0"
   },
   "scripts": {
-    "start": "http-server -p 8000 -c-1 .",
+    "start": "http-server -p 8000 -o -c-1 .",
     "test": "jasmine JASMINE_CONFIG_PATH=jasmine.json"
   }
 }
