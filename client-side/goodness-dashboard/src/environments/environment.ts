@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  appTitle: 'Dev Goodness Dashboard'
+  appTitle: 'Goodness Dashboard (Dev)'
 };
