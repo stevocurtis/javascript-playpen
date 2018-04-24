@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {MetricChooserComponent} from './metric/metric-chooser/metric-chooser.component';
-import {MetricDataService} from './metric/metric-data.service';
+import {MetricDataService} from './metric/metric-data/metric-data.service';
 
 @NgModule({
   declarations: [

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MetricDataService} from '../metric-data.service';
+import {MetricDataService} from '../metric-data/metric-data.service';
 
 @Component({
   selector: 'app-metric-chooser',
