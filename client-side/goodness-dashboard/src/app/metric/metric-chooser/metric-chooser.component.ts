@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {MetricDataService} from '../metric-data.service';
 
 @Component({
   selector: 'app-metric-chooser',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MetricChooserComponent implements OnInit {
 
-  constructor() { }
+  private _metricDataService: MetricDataService;
+
+  constructor(metricDataService: MetricDataService) {
+    this._metricDataService = metricDataService;
+  }
+
+  public getAvailAbleMetrics(): string[] {
+    return this._metricDataService.availableMetrics;
+  }
 
   ngOnInit() {
   }

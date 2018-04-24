@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {MetricChooserComponent} from './metric/metric-chooser/metric-chooser.component';
+import {MetricDataService} from './metric/metric-data.service';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import {MetricChooserComponent} from './metric/metric-chooser/metric-chooser.com
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [MetricDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
