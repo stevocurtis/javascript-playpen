@@ -9,9 +9,11 @@ import {MetricDataService} from '../metric-data/metric-data.service';
 export class MetricChooserComponent implements OnInit {
 
   private _metricDataService: MetricDataService;
+  private _selectedMetric;
 
   constructor(metricDataService: MetricDataService) {
     this._metricDataService = metricDataService;
+    this._selectedMetric = this._metricDataService.availableMetrics[0];
   }
 
   public getAvailAbleMetrics(): string[] {

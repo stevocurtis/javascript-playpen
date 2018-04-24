@@ -1,6 +1,9 @@
 <p>
   Choose which metric you would like to beat your team up on today
-  <select>
-    <option *ngFor="let avMe of getAvailAbleMetrics()" value={{avMe}}>{{avMe}}</option>
+  <select [(ngModel)]="_selectedMetric">
+    <option *ngFor="let avMe of getAvailAbleMetrics()" value="{{avMe}}">{{avMe}}</option>
   </select>
+</p>
+<p>
+  Thank you for choosing to beat up based on <em>{{_selectedMetric}}</em> today!
 </p>
