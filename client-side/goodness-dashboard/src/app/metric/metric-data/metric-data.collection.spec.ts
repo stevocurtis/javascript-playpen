@@ -3,13 +3,15 @@ import {MetricDataCollection} from './metric-data.collection';
 
 describe('MetricDataCollection', () => {
 
-  const metricDataCollection: MetricDataCollection;
+  let metricDataCollection: MetricDataCollection;
 
   beforeEach(() => {
     metricDataCollection = new MetricDataCollection('TestMetric');
   });
 
   it('should create a timestamped date', () => {
-    console.log(metricDataCollection.generateTimestamp());
+    const timeStamp = metricDataCollection.generateTimestamp();
+    console.log(`timeStamp is ${timeStamp}`);
+    expect(timeStamp.length === 19).toBeTruthy();
   });
 });
