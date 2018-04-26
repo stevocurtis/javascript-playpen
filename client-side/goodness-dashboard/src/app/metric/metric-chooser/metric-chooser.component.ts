@@ -21,6 +21,6 @@ export class MetricChooserComponent implements OnInit {
   }
 
   ngOnInit() {
+    this._metricDataService.init();
   }
-
 }
