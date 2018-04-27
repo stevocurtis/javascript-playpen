@@ -18,6 +18,13 @@ export class MetricDataService {
 
   init() {
     console.log('in init');
+    for (let i = 1; i <= 10; i++) {
+      for (const currentMetric of this.availableMetrics) {
+        console.log(`initialising for key ${currentMetric}`);
+        this.metrics.get(currentMetric).populateData();
+        for (let j = 1; j <= 1000; j++) {}
+      }
+    }
   }
 
   public get availableMetrics(): string[] {

@@ -2,12 +2,20 @@ export class MetricDataCollection {
 
   name: string;
   type: string;
-  lowerLimit: number;
-  upperLimit: number;
-  data: Map<string, string>;
+  lowerLimit = 0;
+  upperLimit = 10;
+  data: Map<string, string> = new Map();
 
   constructor(type: string) {
     this.type = type;
+  }
+
+  populateData() {
+    this.data.set(this.generateTimestamp(), this.getRandomMetric().toString());
+  }
+
+  getRandomMetric(): number {
+    return Math.floor(Math.random() * (this.upperLimit - this.lowerLimit + 1) + this.lowerLimit);
   }
 
   generateTimestamp(): string {
@@ -23,7 +31,9 @@ export class MetricDataCollection {
     const minStr = this.padLeft(min.toString(), '0', 2);
     const sec = now.getSeconds();
     const secStr = this.padLeft(sec.toString(), '0', 2);
-    return `${year}-${monthStr}-${dayStr} ${hourStr}:${minStr}:${secStr}`;
+    const millis = now.getMilliseconds();
+    const millisStr = this.padLeft(millis.toString(), '0', 3);
+    return `${year}-${monthStr}-${dayStr} ${hourStr}:${minStr}:${secStr} ${millisStr}`;
   }
 
   padLeft(text: string, padChar: string, size: number): string {

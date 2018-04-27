@@ -12,6 +12,6 @@ describe('MetricDataCollection', () => {
   it('should create a timestamped date', () => {
     const timeStamp = metricDataCollection.generateTimestamp();
     console.log(`timeStamp is ${timeStamp}`);
-    expect(timeStamp.length === 19).toBeTruthy();
+    expect(timeStamp.length === 23).toBeTruthy();
   });
 });

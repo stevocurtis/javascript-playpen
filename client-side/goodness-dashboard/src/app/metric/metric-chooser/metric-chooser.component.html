@@ -7,3 +7,9 @@
 <p>
   Thank you for choosing to beat up based on <em>{{_selectedMetric}}</em> today!
 </p>
+<p>
+  Current data:
+</p>
+<ul>
+  <li *ngFor="let data of retrieveData()">{{data}}</li>
+</ul>
